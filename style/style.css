@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+header{
+    background-color: rgb(122, 79, 163);
+    z-index: 1;
+}
+ul{
+    display: flex;
+    justify-content: center;
+}
+li{
+    padding: 5px 10px;
+    margin: 20px;}
+a{
+    font-size: 20px;
+    font-weight: 900;
+    color: rgb(6, 8, 8);
+}
+
+.Bar{
+    display: none;
+
+}
+@media(max-width:900px) {
+    #nav{
+        display: none;
+        
+    }
+    ul{
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        z-index: 200;
+       
+    }
+    .Bar{
+        display: block;
+        position: absolute;
+        right: 6px;
+        top: 0;
+        font-size: 40px;
+    }
+    #nav.active{
+        display: block;
+        width: 100%;
+        height: 120vh;
+        
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ACCORDION  */
+.satauri{
+    text-align: center;
+    margin: 20px;
+    font-size: 40px;
+}
+.container{
+    margin: 40px auto;
+    width: 800px;
+    z-index: 0;
+
+}
+.accordion-block{
+    border: 2px solid black;
+    background-color: rgb(122, 79, 163);
+    
+}
+.title1{ 
+    display: flex;
+    justify-content: center;
+    position: relative;
+    font-size: 30px;
+    padding: 20px;
+    
+
+    
+}
+    .title1::before {
+        content: '+';
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-40%);
+        font-size: 26px;
+    }
+    .accordion-block.show  .title1::before  {
+        content:  '-';
+    }
+
+.text{
+    display: none;
+}
+
+.accordion-block.show .text {
+    display: block ;
+}
+
+
